@@ -1,0 +1,14 @@
+<div class="modal-header">
+	<h4 class="modal-title">Please Specify Quanity</h4>
+	<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+	<div class="d-flex justify-content-start align-items-center">
+		<a href="javascript:void(0)" type="button"><i class="fa-solid fa-circle-minus" (click)="decrementQty(quantity)"></i></a>
+		<input class="form-control form-control-sm w-25 mx-2" type="text" aria-label="default input example" ngModel="quantity" value="{{quantity}}" disabled>
+		<a href="javascript:void(0)"><i class="fa-solid fa-circle-plus" (click)="incrementQty(quantity)"></i></a>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-outline-secondary" (click)="close(product)">Add To Cart</button>
+</div>

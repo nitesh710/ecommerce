@@ -1,0 +1,27 @@
+<main class="form-checkout w-100 m-auto">
+    <div>
+        <h5>Payment Details</h5>
+        <div class="form-floating mb-2">
+        <input type="number" class="form-control" id="floatingAmount" placeholder="Amount" [(ngModel)]="stripeAmount"
+            required>
+        <label for="floatingAmount">Amount</label>
+        </div>
+
+        <button class="btn btn-primary w-100 py-2" type="submit" (click)="checkout()">
+            Pay Now 
+            @if (isLoading) {
+                <span class="spinner-border spinner-border-sm" aria-hidden="true">
+                </span>
+            }
+        </button>
+    </div>
+    <!-- <form id="payment-form">
+        <div id="payment-element">
+        </div>
+        <button id="submit" (click)="handleSubmit()">
+          <div class="spinner hidden" id="spinner"></div>
+          <span id="button-text">Pay now</span>
+        </button>
+        <div id="payment-message" class="hidden"></div>
+      </form> -->
+</main>
